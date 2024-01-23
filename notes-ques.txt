@@ -1,0 +1,11 @@
+Normal Mathematics Problem :
+
+	> Count Primes
+	> GCD/HCF
+	> Fast Power
+
+	> Pigeon Hole Principle
+	> Catalon Numbers
+	> Inc-Exclu Principle
+
+	> Super Pow

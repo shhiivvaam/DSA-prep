@@ -1,0 +1,72 @@
+Pascal;s Trianlge
+
+		        1
+		      1   1
+		     1  2   1
+		    1  3  3  1
+		   1 4  6  4  1
+		  1 5 10  10 5 1 
+		 1 6 15 20 15 6 1
+
+
+>> To find the Value at some particular row and at some particular column :
+	->   (r-1) C (c-1)
+
+Approach : let r = 10 and c = 3
+	
+	so the nCr will be -> 10!/3!*7!    => which is equal to =>  10*9*8/3*2*1    this is till the r place value which is (3) here, means the n will decrease 3 time and the the r will decrease 3 times wil the value 1
+		
+	
+Code:  
+	int nCr(int n, int r) {    // n = Row and c = Column                 TC: O(r)   SC: O(1)
+		int result = 1;
+		for(int i =0;i<r;i++) {
+			res *= (10-i);
+			res /= (i+1);
+		}
+		return result;
+	 
+	}
+
+
+>> To print the value for some rowIndex given( to print the values at some particular row value)
+
+Approach : (formula)   -> ans*(row-col)/col              T.C = O(n)  and  S.C = O(1) 
+
+Code :
+	void printValues(int row) {
+		long res = 1;
+		print(res);
+		
+		for(int col = 1;col<row;col++) {
+			res *= (row-col);
+			res /=col;
+			print(res);
+		}
+	}
+
+
+>> To print the rows till some row Value
+
+Code :  class Solution {
+    public List<Integer> find(int row) {
+        List<Integer> list = new ArrayList<>();
+        long res = 1;
+        list.add((int)res);
+
+        for(int col = 1;col<row;col++) {
+            res *= row-col;
+            res /= col;
+            list.add((int)res);
+	}
+	return list;
+    }
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> ans = new ArrayList<>();
+
+        for(int i = 1;i<=numRows;i++) {
+            ans.add(find(i));
+        }
+        return ans;
+    }
+}
