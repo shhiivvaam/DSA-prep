@@ -1,6 +1,6 @@
 public class Board_Path {
 
-    // ! This ques is alsp famous with the name -> total Steps / total ways (Jumps)
+    // ! This ques is also famous with the name -> total Steps / total ways (Jumps)
 
     // ! Question :
     // ? We are allowed to take either 1/2 or 3 steps at a time, and find what all

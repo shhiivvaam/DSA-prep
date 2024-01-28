@@ -4,7 +4,6 @@ import java.util.*;
 public class domino2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int a[] =  {5, 1, 2, 6, 6, 1, 3, 1, 4, 3, 4, 3, 4, 6, 1, 2, 4, 1, 6, 2};
 		int[][] pair= new int[a.length/2][2];
 		for(int i = 0;i<a.length;i= i+2) {
