@@ -17,6 +17,7 @@ public class Rat_In_A_Maze {
         }
 
         if (cr >= maze.length || cc >= maze[0].length || cc < 0 || cr < 0 || maze[cr][cc] == 'X') {
+                                                                        //* remeber this important base case written above witht he last condition */
             return;         // base case
         }
 
@@ -28,7 +29,8 @@ public class Rat_In_A_Maze {
         // rat_in_a_maze1(maze, cr, cc-1, ans); // left
         // rat_in_a_maze1(maze, cr+1, cc, ans); // down
 
-        maze[cr][cc] = 'X';
+        maze[cr][cc] = 'X';               // replacing the current index of the matrix with the false 
+        // because here we know that if we have reached this point eans the base case must also got a hit, and so we have checked that we are on the right doirection of finding the word, since the current index of the word matches the current index of the matrix > so we are not marking this index of the maze as some new chsr that will not match with the chars present in the matric, and so the recursion will not check this index and proceed to other indexes, and so we are preventing the infnite recursion calls
         ans[cr][cc] = 1;
         for (int i = 0; i < col.length; i++) {
             rat_in_a_maze1(maze, cr + row[i], cc + col[i], ans);
