@@ -1,0 +1,15 @@
+Stacks:                           { LIFO }
+    > push   : inserts data
+    > pop    : returns and removes the top element from the stack
+    > size   : returns the size of the stack
+    > peek   : return the topmost element of the stack but not remove it from the stack
+    > isEmpty()    : return boolean ans true, is the stack is Empty, else otherwise
+    > isFull()     : return boolean ans true, is the stack is full with the capacity specified, false otherwise
+
+Queues:                           { FIFO }
+    > enqueue : inserts data
+    > dequeue : removes the first element(front element from the start) inserted int the queue from the starting
+    > getFront: returns the first element(front element from the start) in the queue
+    > size :    
+    > isFull()   : 
+    > isEmpty()  :
