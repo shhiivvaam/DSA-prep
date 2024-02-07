@@ -1,0 +1,45 @@
+C:\Users\Shivam Kumar\.leetcode
+
+
+pascal's triangle
+Merge Sorted Array } withput using space
+			 } Gap Method
+Repeat And Missing Number
+
+
+
+
+
+https://docs.google.com/spreadsheets/d/1kq0gps4e8mh7z3n7U53rcGY-WsqZoLa4F96qNNxJWsE/edit#gid=0
+
+
+Question : 
+Course Schdeule
+Longest Arithmetic Subsequence of Given Difference
+Substring With largest Variance
+Maximize the Confusion of an Exam
+ProRam Numbers -- leetocde / and Coding Ninjas          -> letcode par name changed hai
+Longest subarray of 1's After Deleting One Element
+Maximum numbers of events that can be attended
+
+Product of Array Itself           - > Easy/Medium
+
+Number of Longest Increasing Subsequence
+Aplit the Arrays with the Same Averages
+
+Kth Ancestor in a Tree
+Minimum Time to Arrive on Train
+
+Different Bits Sum pairwise - >  Coding Ninjas
+Find Palindromes - > Coding Ninjas
+
+
+All Subsets type question 
+// -> Combinations
+
+
+Asteroids Collision
+Number of Longest Increasing Subsequence
+
+Search in a Rpotated Sorted Array   >> LeetCodee
+Sudoku Solver >> GFG

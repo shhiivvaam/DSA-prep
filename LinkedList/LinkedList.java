@@ -155,6 +155,119 @@ public class LinkedList {
         return temp;
     }
 
+    public Node reverseLinkedList(Node head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        Node curr = head;
+        Node prev = null;
+        Node next = null;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
+
+    public void createCycle() {
+        this.tail.next = this.head.next;
+        // this.tail.next = this.head.next.next;
+        // this.tail.next = this.head;
+    }
+
+    public boolean hasCycle() {
+        Node slow = this.head;
+        Node fast = this.head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast)
+                return true;
+        }
+        return false;
+    }
+
+    public Node cycleNode() {
+        Node slow = this.head;
+        Node fast = this.head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast)
+                return slow;
+        }
+        return null;
+    }
+
+    // Below Function Complexity -> O(n2)
+    public void removeCycle1() {
+        Node cycle = cycleNode();
+        if (cycle == null)
+            return; // calling the cycleNode to return the { node } where cycle is detected, if not
+                    // -> it will return null
+
+        Node start = this.head;
+        while (start != null) {
+
+            Node temp = cycle;
+            while (temp.next != cycle) {
+                if (temp.next == start) {
+                    temp.next = null;
+                    return;
+                }
+                temp = temp.next;
+            }
+            start = start.next;
+        }
+    }
+
+    public void removeCycle2() {
+        Node cycle = cycleNode();
+        if (cycle == null) {
+            return;
+        }
+
+        int count = 1;
+        Node temp = cycle;
+        while (temp.next != cycle) {
+            count++;
+            temp = temp.next;
+        }
+
+        Node fast = this.head;
+        for (int i = 1; i <= count; i++) {
+            fast = fast.next;
+        }
+
+        Node start = head;
+        while (start.next != fast.next) {
+            start = start.next;
+            fast = fast.next;
+        }
+        fast.next = null;
+    }
+
+    // ! This is the most optimised version for Removing cycle from a Linkes List
+    public void FloydCycleRemoval() {
+        Node cycle = cycleNode();
+        if (cycle == null)
+            return;
+
+        Node fast = cycle;
+        Node start = this.head;
+        while (start.next != fast.next) {
+            start = start.next;
+            fast = fast.next;
+        }
+        fast.next = null;
+    }
+
     public void Display() {
         Node temp = this.head;
         while (temp != null) {

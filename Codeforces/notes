@@ -1,0 +1,259 @@
+Questions: 
+
+    1. shortSort
+
+
+Serval_and_Inversion_Magic
+
+1.
+// Scanner ask = new Scanner(System.in);
+        // int input = ask.nextInt();
+        // ask.nextLine();
+
+        // while(input-- > 0) {
+        //     int n = ask.nextInt();
+        //     ask.nextLine();
+        //     String str = ask.nextLine();
+        //     String help = "";
+
+        //     for(int i = n-1;i>=0;i--) {
+        //         help+= ""+str.charAt(i);
+        //     }
+        //     for(int i = 0;i<n;i++) {
+        //         if(str.charAt(i) == help.charAt(i)) {
+        //             System.out.println("Yes");
+        //             break;
+        //         }
+        //         else {
+        //             System.out.println("No");
+        //             break;
+        //         }
+        //     }
+        // }
+        // ask.close();
+
+2.
+// import java.util.Scanner;
+
+// public class InversionMagic {
+//     public static void main(String[] args) {
+//         Scanner scanner = new Scanner(System.in);
+
+//         int t = scanner.nextInt(); // number of test cases
+
+//         while (t-- > 0) {
+//             int n = scanner.nextInt(); // length of the string
+//             String s = scanner.next(); // string s
+
+//             int countOnes = countOnes(s); // count the number of 1s in s
+
+//             if (countOnes == 2) {
+//                 System.out.println("Yes");
+//             } else {
+//                 System.out.println("No");
+//             }
+//         }
+
+//         scanner.close();
+//     }
+
+//     // Helper method to count the number of 1s in a string
+//     private static int countOnes(String s) {
+//         int count = 0;
+//         for (char c : s.toCharArray()) {
+//             if (c == '1') {
+//                 count++;
+//             }
+//         }
+//         return count;
+//     }
+// }
+
+3.
+    //     Scanner scanner = new Scanner(System.in);
+
+    //     int t = scanner.nextInt(); // number of test cases
+
+    //     while (t-- > 0) {
+    //         int n = scanner.nextInt(); // length of the string
+    //         String s = scanner.next(); // string s
+
+    //         boolean possible = isPalindromePossible(s); // check if palindrome is possible
+
+    //         if (possible) {
+    //             System.out.println("Yes");
+    //         } else {
+    //             System.out.println("No");
+    //         }
+    //     }
+
+    //     scanner.close();
+    // }
+
+    // // Helper method to check if palindrome is possible
+    // private static boolean isPalindromePossible(String s) {
+    //     int countOnes = 0;
+    //     int firstOneIndex = -1;
+
+    //     for (int i = 0; i < s.length(); i++) {
+    //         if (s.charAt(i) == '1') {
+    //             countOnes++;
+
+    //             if (firstOneIndex == -1) {
+    //                 firstOneIndex = i;
+    //             }
+    //         }
+    //     }
+
+    //     if (countOnes == 2 && firstOneIndex + 1 < s.length() && s.charAt(firstOneIndex + 1) == '1') {
+    //         return true;
+    //     }
+
+    //     return false;
+
+4.
+//     Scanner scanner = new Scanner(System.in);
+
+    //     int t = scanner.nextInt(); // number of test cases
+
+    //     while (t-- > 0) {
+    //         int n = scanner.nextInt(); // length of the string
+    //         String s = scanner.next(); // string s
+
+    //         boolean possible = isPalindromePossible(s); // check if palindrome is possible
+
+    //         if (possible) {
+    //             System.out.println("Yes");
+    //         } else {
+    //             System.out.println("No");
+    //         }
+    //     }
+
+    //     scanner.close();
+    // }
+
+    // // Helper method to check if palindrome is possible
+    // private static boolean isPalindromePossible(String s) {
+    //     int n = s.length();
+    //     int mismatches = 0;
+
+    //     for (int i = 0, j = n - 1; i < j; i++, j--) {
+    //         if (s.charAt(i) != s.charAt(j)) {
+    //             mismatches++;
+    //         }
+    //     }
+
+    //     // If there is at most one mismatch or all characters are the same, return true
+    //     return mismatches <= 1 || mismatches == 0 && n % 2 == 1;
+
+5.
+
+    //     Scanner scanner = new Scanner(System.in);
+
+    //     int t = scanner.nextInt(); // number of test cases
+
+    //     while (t-- > 0) {
+    //         int n = scanner.nextInt(); // length of the string
+    //         String s = scanner.next(); // string s
+
+    //         boolean possible = isPalindromePossible(s); // check if palindrome is possible
+
+    //         if (possible) {
+    //             System.out.println("Yes");
+    //         } else {
+    //             System.out.println("No");
+    //         }
+    //     }
+
+    //     scanner.close();
+    // }
+
+    // // Helper method to check if palindrome is possible
+    // private static boolean isPalindromePossible(String s) {
+    //     int n = s.length();
+    //     int mismatches = 0;
+
+    //     for (int i = 0; i < n / 2; i++) {
+    //         if (s.charAt(i) != s.charAt(n - 1 - i)) {
+    //             mismatches++;
+    //         }
+    //     }
+
+    //     return mismatches <= 2;
+
+6.
+// public static void main(String[] args) {
+    //     Scanner scanner = new Scanner(System.in);
+
+    //     int t = scanner.nextInt(); // number of test cases
+
+    //     while (t-- > 0) {
+    //         int n = scanner.nextInt(); // length of the string
+    //         String s = scanner.next(); // string s
+
+    //         boolean possible = isPalindromePossible(s); // check if palindrome is possible
+
+    //         if (possible) {
+    //             System.out.println("Yes");
+    //         } else {
+    //             System.out.println("No");
+    //         }
+    //     }
+
+    //     scanner.close();
+    // }
+
+    // // Helper method to check if palindrome is possible
+    // private static boolean isPalindromePossible(String s) {
+    //     int n = s.length();
+    //     int mid = n / 2;
+    //     int mismatches = 0;
+
+    //     for (int i = 0; i < mid; i++) {
+    //         if (s.charAt(i) != s.charAt(n - 1 - i)) {
+    //             mismatches++;
+    //         }
+    //     }
+
+    //     return mismatches <= 1;
+
+7.
+// Scanner scanner = new Scanner(System.in);
+
+//         int t = scanner.nextInt(); // number of test cases
+
+//         while (t-- > 0) {
+//             int n = scanner.nextInt(); // length of the string
+//             String s = scanner.next(); // string s
+
+//             boolean possible = isPalindromePossible(s); // check if palindrome is possible
+
+//             if (possible) {
+//                 System.out.println("Yes");
+//             } else {
+//                 System.out.println("No");
+//             }
+//         }
+
+//         scanner.close();
+//     }
+
+//     // Helper method to check if palindrome is possible
+//     private static boolean isPalindromePossible(String s) {
+//         int n = s.length();
+//         int[] count = new int[2];
+
+//         // Count the occurrences of 0 and 1 in the string
+//         for (int i = 0; i < n; i++) {
+//             count[s.charAt(i) - '0']++;
+//         }
+
+//         // Check if there is at most one count that is odd
+//         int oddCount = 0;
+//         for (int i = 0; i < 2; i++) {
+//             if (count[i] % 2 == 1) {
+//                 oddCount++;
+//             }
+//         }
+
+//         return oddCount <= 1;
