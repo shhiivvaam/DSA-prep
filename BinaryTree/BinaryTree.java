@@ -1,10 +1,16 @@
 import java.util.*;
 
+class Node {
+    int data;
+    Node left;
+    Node right;
+}
+
 public class BinaryTree {
 
     Scanner ask = new Scanner(System.in);
 
-    public class Node {
+    class Node {
         int data;
         Node left;
         Node right;
@@ -77,6 +83,36 @@ public class BinaryTree {
 
         return Math.max(left, right) + 1;
     }
+
+    public int diameterOfBinaryTree(Node root) {
+        if(root == null) return 0;
+
+        int left = diameterOfBinaryTree(root.left);
+        int right = diameterOfBinaryTree(root.right);
+
+        int self = height(root.left) + height(root.right) +2;
+
+        return Math.max(left, Math.max(right, self));
+    }
+
+    // public void LevelOrder() {
+    // LinkedList<Node> queue = new LinkedList<>();
+    // // Queue<Node> queue = new LinkedList<>()
+
+    // queue.add(this.root); // add last
+    // while (!queue.isEmpty()) {
+    // Node remove = queue.remove(); // remove first
+    // System.out.println(remove.data + " ");
+
+    // if (remove.left != null) {
+    // queue.add(remove.left);
+    // }
+    // if (remove.right != null) {
+    // queue.add(remove.right);
+    // }
+    // }
+    // System.out.println();
+    // }
 
     public void Display(Node node) {
         String str = "";
