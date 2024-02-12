@@ -18,6 +18,7 @@ public class Diameter_Binary_Tree {
         }
     }
 
+    // * This way we can find both the height and the diameter of the given Binary Tree
     public class DiaPair {
         int d = 0;
         int ht = -1;
@@ -26,6 +27,7 @@ public class Diameter_Binary_Tree {
     class Solution {
         public int diameter_binary_tree(TreeNode root) {
             return diameter(root).d; // returning the return type { DiaPair } d value;
+            // return diameter(root).ht; // returning the return type { DiaPair } d value;
         }
 
         public DiaPair diameter(TreeNode root) {
@@ -37,9 +39,9 @@ public class Diameter_Binary_Tree {
             DiaPair rdp = diameter(root.right);
             DiaPair sdp = new DiaPair();
 
-            sdp.ht = Math.max(ldp.ht, rdp.ht) + 1;
+            sdp.ht = Math.max(ldp.ht, rdp.ht) + 1;               // this finds the height { ht } of the given Binary Tree
             int dia = ldp.ht + rdp.ht + 2;
-            sdp.d = Math.max(dia, Math.max(ldp.d, rdp.d));
+            sdp.d = Math.max(dia, Math.max(ldp.d, rdp.d));       // this finds the diameter { d } of the given Binary Tree 
 
             return sdp;
         }
