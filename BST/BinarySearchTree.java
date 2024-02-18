@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class BinarySearchTree {
     public class TreeNode {
         int val;
@@ -36,6 +38,38 @@ public class BinarySearchTree {
         node.right = CreateTree(tree, mid + 1, end);
 
         return node;
+    }
+
+    public void CreateTree() {
+        Scanner ask = new Scanner(System.in);
+
+        Queue<TreeNode> q = new LinkedList<TreeNode>();
+        int item = ask.nextInt();
+
+        TreeNode node = new TreeNode();
+        node.val = item;
+        this.root = node;
+        q.add(node);
+
+        while (!q.isEmpty()) {
+            TreeNode rv = q.remove();
+
+            int one = ask.nextInt();
+            int two = ask.nextInt();
+
+            if (one != -1) {
+                TreeNode temp = new TreeNode();
+                temp.val = one;
+                rv.left = temp;
+                q.add(temp);
+            }
+            if (two != -1) {
+                TreeNode temp = new TreeNode();
+                temp.val = two;
+                rv.right = temp;
+                q.add(temp);
+            }
+        }
     }
 
     public TreeNode insertIntoBST(TreeNode root, int val) {
