@@ -1,0 +1,1 @@
+{"name":"Local: lcs_longest_common_subsequences","url":"c:\\Users\\lifes\\Desktop\\DSA\\DP\\lcs_longest_common_subsequences.java","tests":[{"id":1710606397586,"input":"abcde\nace","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\lifes\\Desktop\\DSA\\DP\\lcs_longest_common_subsequences.java","group":"local","local":true}
