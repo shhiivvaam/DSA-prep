@@ -1,4 +1,3 @@
-package Sorting;
 public class insertion_sort {
     public static void main(String[] args) {
         int arr[] = {1,4,6,3,2,5,6,9,1,5,8,3,579,34,2,6,2};
