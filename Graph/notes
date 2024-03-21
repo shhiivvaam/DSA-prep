@@ -1,0 +1,8 @@
+BFS -> for unweighted graphs: Guarasntees to find the shortest path
+
+* Total number of edges in a Complete Binary Tree : n*(n-1)/2
+
+
+NOTE 👍
+    * Every Tree is a Graph
+    * Every Graph is not a Tree
