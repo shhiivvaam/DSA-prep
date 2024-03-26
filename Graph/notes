@@ -1,4 +1,4 @@
-BFS -> for unweighted graphs: Guarasntees to find the shortest path
+BFS -> for unweighted graphs: Guarantees to find the shortest path
 
 * Total number of edges in a Complete Binary Tree : n*(n-1)/2
 
