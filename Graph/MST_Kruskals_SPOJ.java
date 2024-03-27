@@ -5,7 +5,7 @@ public class Main {
     // ! Here we have used the DSU and Kruskal's Code
 
     // ! This is the Kruskal's Algorithm Code
-    public HashMap<Integer, HashMap<Integer, Integer>> map;
+    HashMap<Integer, HashMap<Integer, Integer>> map;
 
     // Graph Creation Code
     public Main(int v) {

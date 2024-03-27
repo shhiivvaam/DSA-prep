@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Kruskals_Algoritm {
-    public HashMap<Integer, HashMap<Integer, Integer>> map;
+    HashMap<Integer, HashMap<Integer, Integer>> map;
 
     // Graph Creation Code
     public Kruskals_Algoritm(int v) {
@@ -113,7 +113,8 @@ public class Kruskals_Algoritm {
                 dsu.union(re1, re2);
             }
         }
-        System.out.println(sum);
+
+        System.out.println("Total Sum :" + sum);
     }
 
     public static void main(String[] args) {
@@ -134,5 +135,7 @@ public class Kruskals_Algoritm {
         }
 
         ks.KruskalsAlgoritm();
+
+        ask.close();
     }
 }

@@ -11,7 +11,7 @@ public class DisJointSet {
         Node parent;
     }
 
-    public HashMap<Integer, Node> map = new HashMap<>();
+    HashMap<Integer, Node> map = new HashMap<>();
 
     public void CreateSet(int v) {
         Node nn = new Node();
