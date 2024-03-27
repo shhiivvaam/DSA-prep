@@ -6,3 +6,5 @@ BFS -> for unweighted graphs: Guarantees to find the shortest path
 NOTE 👍
     * Every Tree is a Graph
     * Every Graph is not a Tree
+
+-> Undirected Graph should not contain any Negative Weighted Edge. If so, then any of the Algorithms won't work, because then it will create a cycle, and the total of the cost(weighted edge added cost) will always increase in negative.

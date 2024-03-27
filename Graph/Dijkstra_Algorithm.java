@@ -1,6 +1,10 @@
 import java.util.*;
 
 public class Dijkstra_Algorithm {
+    // ! Dijkstra's algorithm is a method for finding the shortest path between
+    // nodes in a weighted graph
+    // * It is used to check for the path with the shortest cost.
+    // * It fails for negative weighted Graph Edge.
     HashMap<Integer, HashMap<Integer, Integer>> map;
 
     public Dijkstra_Algorithm(int v) {
